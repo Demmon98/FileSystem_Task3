@@ -28,10 +28,10 @@ namespace Find
             {
                 DirectoryInfo directory = new DirectoryInfo(path);
 
-                Console.WriteLine(new string(' ', spaceCount) + separatedString + fullPath);
-
                 if (string.IsNullOrEmpty(fullPath))
                     fullPath = directory.Name;
+
+                Console.WriteLine(new string(' ', spaceCount) + separatedString + fullPath);
 
                 foreach (var item in directory.GetFiles())
                 {
