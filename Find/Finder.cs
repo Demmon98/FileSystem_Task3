@@ -11,7 +11,7 @@ namespace Find
     {
         List<DirectoryInfo> pathes = new List<DirectoryInfo>();
         int spaceCount = 0;
-        string separatedString = "-+";
+        string separatedString = "+-";
         string fullPath = "";
 
         public Finder() => spaceCount = 0;
@@ -28,7 +28,7 @@ namespace Find
             {
                 DirectoryInfo directory = new DirectoryInfo(path);
 
-                Console.WriteLine(new string(' ', spaceCount) + separatedString + fullPath + "\\" + (fullPath == "" ? directory.Name : fullPath));
+                Console.WriteLine(new string(' ', spaceCount) + separatedString + fullPath);
 
                 if (string.IsNullOrEmpty(fullPath))
                     fullPath = directory.Name;
